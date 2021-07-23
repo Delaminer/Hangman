@@ -90,7 +90,7 @@ class Game extends React.Component {
      */
     getWords() {
         //There are multiple lists of words, each in separate files, so read each one and add it to the master list
-        let wordLists = ['/nouns.txt', '/adjectives.txt'];
+        let wordLists = ['/Hangman/nouns.txt', '/Hangman/adjectives.txt'];
 
         return Promise.all(
             wordLists.map(list => fetch(list)
