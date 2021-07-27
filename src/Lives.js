@@ -44,10 +44,15 @@ class Lives extends React.Component {
         }
         return (
             // <Svg height='400' width='400' style={this.props.styles.pencil}>
-            <div className='lives'>
+            // <div className='lives'>
+            // <div className='drawing'>
+
                 <svg 
+                    className='drawing'
                     // height='400' width='400' 
-                    stroke='black' strokeWidth='2' fill='none'
+                    stroke='black'
+                    strokeWidth='2'
+                    fill='none'
                     // style={{width: '50%', height: '50%'}}
                     viewBox='0 0 400 400'
                 >
@@ -61,13 +66,13 @@ class Lives extends React.Component {
                         {hearts}
                     </g>
                 </svg>
-            </div>
+                // <div className='drawing'>hi</div>
         );
     }
 
     render() {
         return (
-            <div>
+            <div className='lives'>
                 {this.getDrawing(this.props.lives)}
             </div>
         );

@@ -1,6 +1,7 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
     user-select: none;
+    overflow: hidden;
 }
 
 .container {
@@ -17,16 +18,23 @@
 }
 
 .lives {
-    text-align: center;
-}
-
-.lives svg {
+    width: 100%;
+    margin: auto;
     height: 100%;
-    width: fit-content;
-    text-align: center;
-    display: inline;
 }
 
+.lives .drawing {
+
+    aspect-ratio: 1;
+    display: block;
+
+    width: auto;
+    height: 100%;
+    margin: auto;
+
+    max-height: 100%;
+    max-width: 100%;
+}
 
 .guesses {
     text-align: center;
@@ -40,7 +48,7 @@
     border: solid 3 black;
     width: 100%;
     display: inline;
-    aspect-ratio: 1;
+    height: calc(100% - 5px);
 }
 
 .letter.enabled {
@@ -50,8 +58,12 @@
 .letterBase {
     width: 12.5%;
     max-width: 70px;
-    margin: 3px;
+    
+    margin-left: 3px;
+    margin-right: 3px;
+    
     display: inline-block;
+    height: 100%;
 }
 
 .enabled {
@@ -66,8 +78,13 @@
     background-color: lightpink;
 }
 
+.keyboard {
+    height: 100%;
+}
 .keyboardRow {
     text-align: center;
+    height: 25%;
+    max-height: 75px; /* So the button will be 70x70 as a result (a square) */
 }
 
 .restart {

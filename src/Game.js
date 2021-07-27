@@ -60,20 +60,17 @@ class Game extends React.Component {
 
         let vowelList = 'aeiouy';
         for(let word of words) {
-            if (lengths[word.length] == undefined) lengths[word.length] = 0;
+            if (lengths[word.length] === undefined) lengths[word.length] = 0;
             lengths[word.length]++;
 
-            let vowels = 0, consonant = 0;
+            let vowels = 0;
             for(let letter of word) {
                 if (vowelList.includes(letter)) {
                     vowels++;
                 }
-                else {
-                    consonant++;
-                }
             }
             let percent = Math.floor(100.0 * vowels / word.length);
-            if (percents[percent] == undefined) percents[percent] = 0;
+            if (percents[percent] === undefined) percents[percent] = 0;
             percents[percent]++;
         }
         console.log('PERCENTS')

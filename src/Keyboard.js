@@ -10,28 +10,15 @@ class Letter extends React.Component {
         return (
             <div className='letterBase'>
                 <button 
-                    // title={this.props.value}
                     className={`letter ${this.props.status}`}
-                    // color='#aaa'
-                    // buttonStyle={this.props.styles.letter}
                     onClick={this.props.onClick} 
-                    disabled={this.props.disabled}>
+                    disabled={this.props.disabled}
+                >
                         {this.props.value}
                 </button>
             </div>
         );
     }
-    // render() {
-    //     return (
-    //         <div className='letter'>
-    //             <button className='letter man' 
-    //             onClick={this.props.onClick} 
-    //             disabled={this.props.disabled}>
-    //                 {this.props.value}
-    //             </button>
-    //         </div>
-    //     );
-    // }
 }
 
 //Define keyboard
@@ -72,7 +59,7 @@ class Keyboard extends React.Component {
         }
 
         return (
-            <div>
+            <div className='keyboard'>
                 {keyboard}
             </div>
         );

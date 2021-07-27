@@ -12,7 +12,7 @@ class Guesses extends React.Component {
         let display = [];
         word.split('').forEach((char, i) => {
             display.push(guesses.includes(char)? char : leftover(char));
-            if (i != word.length - 1) {
+            if (i !== word.length - 1) {
                 display.push(' ')
             }
         });
@@ -27,7 +27,7 @@ class Guesses extends React.Component {
                 // adjustsFontSizeToFit
                 // numberOfLines={1}
             >
-                {this.displayProgress(this.props.word, this.props.guesses, this.props.status == 0)}
+                {this.displayProgress(this.props.word, this.props.guesses, this.props.status === 0)}
             </div>
         );
     }
