@@ -43,30 +43,23 @@ class Lives extends React.Component {
             body = body.filter((v, i) => i < partsToShow);
         }
         return (
-            // <Svg height='400' width='400' style={this.props.styles.pencil}>
-            // <div className='lives'>
-            // <div className='drawing'>
+            <svg 
+                className='drawing'
+                stroke='black'
+                strokeWidth='2'
+                fill='none'
+                viewBox='0 0 400 400'
+            >
+                <line x1='50' y1='350' x2='150' y2='350'/>
+                <line x1='100' y1='50' x2='100' y2='350'/>
+                <line x1='100' y1='50' x2='270' y2='50'/>
+                <line x1='270' y1='100' x2='270' y2='50'/>
 
-                <svg 
-                    className='drawing'
-                    // height='400' width='400' 
-                    stroke='black'
-                    strokeWidth='2'
-                    fill='none'
-                    // style={{width: '50%', height: '50%'}}
-                    viewBox='0 0 400 400'
-                >
-                    <line x1='50' y1='350' x2='150' y2='350'/>
-                    <line x1='100' y1='50' x2='100' y2='350'/>
-                    <line x1='100' y1='50' x2='270' y2='50'/>
-                    <line x1='270' y1='100' x2='270' y2='50'/>
-
-                    {body}
-                    <g stroke='none' fill='red'>
-                        {hearts}
-                    </g>
-                </svg>
-                // <div className='drawing'>hi</div>
+                {body}
+                <g stroke='none' fill='red'>
+                    {hearts}
+                </g>
+            </svg>
         );
     }
 
